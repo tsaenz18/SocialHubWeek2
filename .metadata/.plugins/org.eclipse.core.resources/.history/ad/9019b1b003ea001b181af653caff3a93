@@ -1,0 +1,36 @@
+package com.example.services;
+
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.dao.FileIO;
+import com.example.dao.AccountDao;
+import com.example.logging.Logging;
+import com.example.models.Account;
+import com.example.models.AccountDisplay;
+import com.example.models.User;
+
+public class AccountService {
+	
+	private AccountDao aDao;
+	  	private double balance;
+	    private int user_id;
+		this.aDao = a;
+	}
+	//might remove transactionId
+	public void addAccount(int customerId, int accountId, double balance) {
+		Account a = new Account(customerId, accountId, balance);
+		aDao.createAccount(a);
+	}
+	
+	public List<AccountDisplay> getAllAccounts(){
+		return aDao.getAllAccounts();
+	}
+	
+	public User loadUserPosts(User u) {
+		return aDao.getUsersAccounts(u);
+	}
+	public int getAccountNumber()
+
+}

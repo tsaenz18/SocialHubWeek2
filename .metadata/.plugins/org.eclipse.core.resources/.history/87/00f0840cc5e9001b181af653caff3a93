@@ -1,0 +1,79 @@
+package com.example.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Customer {
+	 	private int accountId;
+	    private int accountHolderId;
+	    private int accountNumber;
+	    private ArrayList<Transaction> transactions;
+
+	    public Account() {
+	        transactions = new ArrayList<Transaction>();
+
+	    }
+
+	    public Account(int accountId, int accountHolderId) {
+	        this.accountId = accountId;
+	        this.accountHolderId = accountHolderId;
+	        this.accountNumber = 100000000 + new Random().nextInt(900000000);
+	        this.transactions = new ArrayList<Transaction>();
+
+	    }
+
+	    public Account(int accountHolderId) {
+	        this.accountHolderId = accountHolderId;
+	        this.accountNumber = 100000000 + new Random().nextInt(900000000);
+	        this.transactions = new ArrayList<Transaction>();
+	    }
+
+	    public Account(int accountId, int accountHolderId, int accountNumber) {
+	        this.accountId = accountId;
+	        this.accountHolderId = accountHolderId;
+	        this.accountNumber=accountNumber;
+	        this.transactions= new ArrayList<Transaction>();
+	    }
+
+	    public int getAccountId() {
+	        return accountId;
+	    }
+
+	    public void setAccountId(int accountId) {
+	        this.accountId = accountId;
+	    }
+
+	    public int getAccountHolderId() {
+	        return accountHolderId;
+	    }
+
+	    public void setAccountHolderId(int accountHolderId) {
+	        this.accountHolderId = accountHolderId;
+	    }
+
+	    public int getAccountNumber() {
+	        return accountNumber;
+	    }
+
+	    public void setAccountNumber(int accountNumber) {
+	        this.accountNumber = accountNumber;
+	    }
+
+	    public ArrayList<Transaction> getTransactions() {
+	        return transactions;
+	    }
+
+	    public void setTransactions(ArrayList<Transaction> transactions) {
+	        this.transactions = transactions;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return "Account [accountId=" + accountId + ", accountHolderId=" + accountHolderId + ", accountNumber="
+	                + accountNumber + ", transactions=" + transactions + "]";
+	    }
+	    
+	}
+	
+
+}
